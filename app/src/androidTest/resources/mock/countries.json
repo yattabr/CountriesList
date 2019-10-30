@@ -1,0 +1,262 @@
+[
+  {
+    "name": "United Kingdom of Great Britain and Northern Ireland",
+    "topLevelDomain": [
+      ".uk"
+    ],
+    "alpha2Code": "GB",
+    "alpha3Code": "GBR",
+    "callingCodes": [
+      "44"
+    ],
+    "capital": "London",
+    "altSpellings": [
+      "GB",
+      "UK",
+      "Great Britain"
+    ],
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 65110000,
+    "latlng": [
+      54.0,
+      -2.0
+    ],
+    "demonym": "British",
+    "area": 242900.0,
+    "gini": 34.0,
+    "timezones": [
+      "UTC-08:00",
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC-03:00",
+      "UTC-02:00",
+      "UTC",
+      "UTC+01:00",
+      "UTC+02:00",
+      "UTC+06:00"
+    ],
+    "borders": [
+      "IRL"
+    ],
+    "nativeName": "United Kingdom",
+    "numericCode": "826",
+    "currencies": [
+      {
+        "code": "GBP",
+        "name": "British pound",
+        "symbol": "£"
+      }
+    ],
+    "languages": [
+      {
+        "iso639_1": "en",
+        "iso639_2": "eng",
+        "name": "English",
+        "nativeName": "English"
+      }
+    ],
+    "translations": {
+      "de": "Vereinigtes Königreich",
+      "es": "Reino Unido",
+      "fr": "Royaume-Uni",
+      "ja": "イギリス",
+      "it": "Regno Unito",
+      "br": "Reino Unido",
+      "pt": "Reino Unido",
+      "nl": "Verenigd Koninkrijk",
+      "hr": "Ujedinjeno Kraljevstvo",
+      "fa": "بریتانیای کبیر و ایرلند شمالی"
+    },
+    "flag": "https://restcountries.eu/data/gbr.svg",
+    "regionalBlocs": [
+      {
+        "acronym": "EU",
+        "name": "European Union",
+        "otherAcronyms": [],
+        "otherNames": []
+      }
+    ],
+    "cioc": "GBR"
+  },
+  {
+    "name": "Brazil",
+    "topLevelDomain": [
+      ".br"
+    ],
+    "alpha2Code": "BR",
+    "alpha3Code": "BRA",
+    "callingCodes": [
+      "55"
+    ],
+    "capital": "Brasília",
+    "altSpellings": [
+      "BR",
+      "Brasil",
+      "Federative Republic of Brazil",
+      "República Federativa do Brasil"
+    ],
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 206135893,
+    "latlng": [
+      -10.0,
+      -55.0
+    ],
+    "demonym": "Brazilian",
+    "area": 8515767.0,
+    "gini": 54.7,
+    "timezones": [
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC-03:00",
+      "UTC-02:00"
+    ],
+    "borders": [
+      "ARG",
+      "BOL",
+      "COL",
+      "GUF",
+      "GUY",
+      "PRY",
+      "PER",
+      "SUR",
+      "URY",
+      "VEN"
+    ],
+    "nativeName": "Brasil",
+    "numericCode": "076",
+    "currencies": [
+      {
+        "code": "BRL",
+        "name": "Brazilian real",
+        "symbol": "R$"
+      }
+    ],
+    "languages": [
+      {
+        "iso639_1": "pt",
+        "iso639_2": "por",
+        "name": "Portuguese",
+        "nativeName": "Português"
+      }
+    ],
+    "translations": {
+      "de": "Brasilien",
+      "es": "Brasil",
+      "fr": "Brésil",
+      "ja": "ブラジル",
+      "it": "Brasile",
+      "br": "Brasil",
+      "pt": "Brasil",
+      "nl": "Brazilië",
+      "hr": "Brazil",
+      "fa": "برزیل"
+    },
+    "flag": "https://restcountries.eu/data/bra.svg",
+    "regionalBlocs": [
+      {
+        "acronym": "USAN",
+        "name": "Union of South American Nations",
+        "otherAcronyms": [
+          "UNASUR",
+          "UNASUL",
+          "UZAN"
+        ],
+        "otherNames": [
+          "Unión de Naciones Suramericanas",
+          "União de Nações Sul-Americanas",
+          "Unie van Zuid-Amerikaanse Naties",
+          "South American Union"
+        ]
+      }
+    ],
+    "cioc": "BRA"
+  },
+  {
+    "name": "United States of America",
+    "topLevelDomain": [
+      ".us"
+    ],
+    "alpha2Code": "US",
+    "alpha3Code": "USA",
+    "callingCodes": [
+      "1"
+    ],
+    "capital": "Washington, D.C.",
+    "altSpellings": [
+      "US",
+      "USA",
+      "United States of America"
+    ],
+    "region": "Americas",
+    "subregion": "Northern America",
+    "population": 323947000,
+    "latlng": [
+      38.0,
+      -97.0
+    ],
+    "demonym": "American",
+    "area": 9629091.0,
+    "gini": 48.0,
+    "timezones": [
+      "UTC-12:00",
+      "UTC-11:00",
+      "UTC-10:00",
+      "UTC-09:00",
+      "UTC-08:00",
+      "UTC-07:00",
+      "UTC-06:00",
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC+10:00",
+      "UTC+12:00"
+    ],
+    "borders": [
+      "CAN",
+      "MEX"
+    ],
+    "nativeName": "United States",
+    "numericCode": "840",
+    "currencies": [
+      {
+        "code": "USD",
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    ],
+    "languages": [
+      {
+        "iso639_1": "en",
+        "iso639_2": "eng",
+        "name": "English",
+        "nativeName": "English"
+      }
+    ],
+    "translations": {
+      "de": "Vereinigte Staaten von Amerika",
+      "es": "Estados Unidos",
+      "fr": "États-Unis",
+      "ja": "アメリカ合衆国",
+      "it": "Stati Uniti D'America",
+      "br": "Estados Unidos",
+      "pt": "Estados Unidos",
+      "nl": "Verenigde Staten",
+      "hr": "Sjedinjene Američke Države",
+      "fa": "ایالات متحده آمریکا"
+    },
+    "flag": "https://restcountries.eu/data/usa.svg",
+    "regionalBlocs": [
+      {
+        "acronym": "NAFTA",
+        "name": "North American Free Trade Agreement",
+        "otherAcronyms": [],
+        "otherNames": [
+          "Tratado de Libre Comercio de América del Norte",
+          "Accord de Libre-échange Nord-Américain"
+        ]
+      }
+    ],
+    "cioc": "USA"
+  }
+]
