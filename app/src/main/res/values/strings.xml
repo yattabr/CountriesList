@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RestCountries</string>
+    <string name="type_search">Type your search</string>
+</resources>
