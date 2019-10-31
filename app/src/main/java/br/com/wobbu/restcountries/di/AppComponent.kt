@@ -1,6 +1,6 @@
 package br.com.wobbu.restcountries.di
 
-import br.com.wobbu.restcountries.main.MainActivity
+import br.com.wobbu.restcountries.view.main.MainActivity
 import dagger.Component
 import javax.inject.Singleton
 

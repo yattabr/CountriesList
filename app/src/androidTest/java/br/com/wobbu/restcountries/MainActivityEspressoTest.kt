@@ -7,7 +7,7 @@ import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
-import br.com.wobbu.restcountries.main.MainActivity
+import br.com.wobbu.restcountries.view.main.MainActivity
 import br.com.wobbu.restcountries.utils.MockServerDispatcher
 import okhttp3.mockwebserver.MockWebServer
 import org.hamcrest.Matchers

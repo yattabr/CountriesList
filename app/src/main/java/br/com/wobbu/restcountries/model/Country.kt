@@ -1,12 +1,12 @@
 package br.com.wobbu.restcountries.model
 
-class Countries {
+import java.io.Serializable
+
+class Country : Serializable {
     var name: String = ""
     var capital: String = ""
     var region: String = ""
     var population: String = ""
     var flag: String = ""
-    var latlng: ArrayList<String> = arrayListOf()
-
-
+    var latlng: ArrayList<Double> = arrayListOf()
 }

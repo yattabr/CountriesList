@@ -1,7 +1,7 @@
 package br.com.wobbu.restcountries.di
 
 import android.content.Context
-import br.com.wobbu.restcountries.main.CountriesAdapter
+import br.com.wobbu.restcountries.view.main.CountriesAdapter
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

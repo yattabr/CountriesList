@@ -1,4 +1,4 @@
-package br.com.wobbu.restcountries.main
+package br.com.wobbu.restcountries.view.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

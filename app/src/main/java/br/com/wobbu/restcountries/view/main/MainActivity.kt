@@ -1,4 +1,4 @@
-package br.com.wobbu.restcountries.main
+package br.com.wobbu.restcountries.view.main
 
 import android.os.Bundle
 import android.text.Editable
@@ -13,9 +13,8 @@ import br.com.wobbu.restcountries.base.BaseApplication
 import br.com.wobbu.restcountries.base.ViewModelFactory
 import br.com.wobbu.restcountries.data.ApiResponse
 import br.com.wobbu.restcountries.data.Status
-import br.com.wobbu.restcountries.model.Countries
+import br.com.wobbu.restcountries.model.Country
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.Exception
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -55,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             Status.LOADING -> loading.visibility = View.VISIBLE
             Status.SUCCESS -> {
                 loading.visibility = View.GONE
-                mountRecyclerView(apiResponse.data as ArrayList<Countries>)
+                mountRecyclerView(apiResponse.data as ArrayList<Country>)
             }
             Status.ERROR -> {
                 loading.visibility = View.GONE
@@ -64,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun mountRecyclerView(items: ArrayList<Countries>) {
+    private fun mountRecyclerView(items: ArrayList<Country>) {
         countriesAdapter.setActivityContext(this)
         countriesAdapter.loadCountries(items)
         recycler_view.adapter = countriesAdapter

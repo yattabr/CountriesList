@@ -1,6 +1,7 @@
-package br.com.wobbu.restcountries.main
+package br.com.wobbu.restcountries.view.main
 
 import android.app.Activity
+import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +10,8 @@ import android.widget.Filter
 import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import br.com.wobbu.restcountries.R
-import br.com.wobbu.restcountries.model.Countries
+import br.com.wobbu.restcountries.model.Country
+import br.com.wobbu.restcountries.view.countryDetail.CountryDetailActivity
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou
 import kotlinx.android.synthetic.main.item_countries.view.*
 import java.text.DecimalFormat
@@ -19,8 +21,8 @@ import java.util.*
 class CountriesAdapter() :
     RecyclerView.Adapter<CountriesAdapter.CustomViewHolder>(), Filterable {
 
-    private var filteredList: ArrayList<Countries> = arrayListOf()
-    private var CountriesList: ArrayList<Countries> = arrayListOf()
+    private var filteredList: ArrayList<Country> = arrayListOf()
+    private var CountriesList: ArrayList<Country> = arrayListOf()
     private lateinit var activityContext: Activity
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
@@ -29,7 +31,7 @@ class CountriesAdapter() :
         return CustomViewHolder(activityContext, view)
     }
 
-    fun loadCountries(items: ArrayList<Countries>) {
+    fun loadCountries(items: ArrayList<Country>) {
         filteredList = items
         CountriesList = items
     }
@@ -58,7 +60,7 @@ class CountriesAdapter() :
                         item.name.toLowerCase(Locale.getDefault())
                             .contains(charString.toLowerCase(Locale.getDefault()))
                     }
-                    list as ArrayList<Countries>
+                    list as ArrayList<Country>
                 }
                 val filterResults = FilterResults()
                 filterResults.values = filteredList
@@ -66,7 +68,7 @@ class CountriesAdapter() :
             }
 
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                filteredList = results!!.values as ArrayList<Countries>
+                filteredList = results!!.values as ArrayList<Country>
                 notifyDataSetChanged()
             }
 
@@ -76,14 +78,20 @@ class CountriesAdapter() :
     class CustomViewHolder(private val context: Activity, itemView: View) :
         RecyclerView.ViewHolder(itemView) {
 
-        fun bind(item: Countries) {
+        fun bind(item: Country) {
             itemView.txt_name.text = item.name
 
             val population = DecimalFormat("#,###").format(item.population.toDouble())
-            itemView.txt_population.text = "Population: ${population}"
+            itemView.txt_population.text = "Population: $population"
 
             val flagUri = Uri.parse(item.flag)
-            GlideToVectorYou.justLoadImage(context, flagUri, itemView.img_profile)
+            GlideToVectorYou.justLoadImage(context, flagUri, itemView.img_flag)
+
+            itemView.setOnClickListener {
+                val intent = Intent(context, CountryDetailActivity::class.java)
+                intent.putExtra("country", item)
+                context.startActivity(intent)
+            }
         }
     }
 }
