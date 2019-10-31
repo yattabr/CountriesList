@@ -3,12 +3,13 @@ package br.com.wobbu.restcountries
 import android.content.Intent
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions
+import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
-import br.com.wobbu.restcountries.view.main.MainActivity
 import br.com.wobbu.restcountries.utils.MockServerDispatcher
+import br.com.wobbu.restcountries.view.main.MainActivity
 import okhttp3.mockwebserver.MockWebServer
 import org.hamcrest.Matchers
 import org.junit.After
@@ -48,7 +49,7 @@ class MainActivityEspressoTest {
         Espresso.onView(
             Matchers.allOf(
                 ViewMatchers.withId(R.id.txt_name),
-                ViewMatchers.withText("United Kingdom")
+                ViewMatchers.withText("Brazil")
             )
         ).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
     }
@@ -65,6 +66,25 @@ class MainActivityEspressoTest {
             Matchers.allOf(
                 ViewMatchers.withId(R.id.txt_name),
                 ViewMatchers.withText("United Kingdom of Great Britain and Northern Ireland")
+            )
+        ).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+    }
+
+    @Test
+    fun goToDetailActivity() {
+        webServer.setDispatcher(MockServerDispatcher.RequestDispatcher())
+        activityRule.launchActivity(Intent())
+        Espresso.onView(
+            Matchers.allOf(
+                ViewMatchers.withId(R.id.txt_name),
+                ViewMatchers.withText("Brazil")
+            )
+        ).perform(click())
+
+        Espresso.onView(
+            Matchers.allOf(
+                ViewMatchers.withId(R.id.txt_country_name),
+                ViewMatchers.withText("Country - Brazil")
             )
         ).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
     }

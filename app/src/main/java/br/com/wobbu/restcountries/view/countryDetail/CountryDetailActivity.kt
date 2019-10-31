@@ -31,7 +31,7 @@ class CountryDetailActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun initUI() {
-        txt_name.text = "Country - ${country.name}"
+        txt_country_name.text = "Country - ${country.name}"
         txt_capital.text = "Capital - ${country.capital}"
 
         val population = DecimalFormat("#,###").format(country.population.toDouble())
@@ -50,7 +50,7 @@ class CountryDetailActivity : AppCompatActivity(), OnMapReadyCallback {
         if (country.latlng.isNotEmpty()) {
             val location = LatLng(country.latlng[0], country.latlng[1])
             mMap.addMarker(MarkerOptions().position(location).title(country.name))
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 6f))
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 2f))
         }
     }
 }
