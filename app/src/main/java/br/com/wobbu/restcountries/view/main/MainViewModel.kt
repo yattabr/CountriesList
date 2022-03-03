@@ -3,7 +3,7 @@ package br.com.wobbu.restcountries.view.main
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.com.wobbu.restcountries.data.ApiResponse
-import br.com.wobbu.restcountries.data.Repository
+import br.com.wobbu.restcountries.data.main.Repository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -23,9 +23,4 @@ class MainViewModel(var repository: Repository) : ViewModel() {
                 { throwable -> fetchCountriesObserver.setValue(ApiResponse.error(throwable)) }
             ))
     }
-
-//    fun convertJsonToRepositories(json: String): ArrayList<Repositories> {
-//        return Gson().fromJson(json, Array<Repositories>::class.java).toCollection(ArrayList())
-//    }
-
 }

@@ -5,9 +5,10 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import br.com.wobbu.restcountries.R
 import br.com.wobbu.restcountries.base.BaseApplication
 import br.com.wobbu.restcountries.base.ViewModelFactory
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
+
     @Inject
     lateinit var countriesAdapter: CountriesAdapter
     private lateinit var mainViewModel: MainViewModel
@@ -30,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         (application as BaseApplication).getAppComponent().doInjection(this)
-        mainViewModel = ViewModelProviders.of(this, viewModelFactory).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
 
         initObserver()
         initUI()

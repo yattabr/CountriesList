@@ -11,7 +11,7 @@ import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import br.com.wobbu.restcountries.R
 import br.com.wobbu.restcountries.model.Country
-import br.com.wobbu.restcountries.view.countryDetail.CountryDetailActivity
+import br.com.wobbu.restcountries.view.countryDetail.CountryDetailsActivity
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou
 import kotlinx.android.synthetic.main.item_countries.view.*
 import java.text.DecimalFormat
@@ -45,7 +45,7 @@ class CountriesAdapter() :
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        filteredList.sortBy { it.name }
+        filteredList.sortBy { it.name.common }
         holder.bind(filteredList[position])
     }
 
@@ -57,7 +57,7 @@ class CountriesAdapter() :
                     CountriesList
                 } else {
                     val list = CountriesList.filter { item ->
-                        item.name.toLowerCase(Locale.getDefault())
+                        item.name.common.toLowerCase(Locale.getDefault())
                             .contains(charString.toLowerCase(Locale.getDefault()))
                     }
                     list as ArrayList<Country>
@@ -79,16 +79,16 @@ class CountriesAdapter() :
         RecyclerView.ViewHolder(itemView) {
 
         fun bind(item: Country) {
-            itemView.txt_name.text = item.name
+            itemView.txt_name.text = item.name.common
 
             val population = DecimalFormat("#,###").format(item.population.toDouble())
             itemView.txt_population.text = "Population: $population"
 
-            val flagUri = Uri.parse(item.flag)
+            val flagUri = Uri.parse(item.flags.svg)
             GlideToVectorYou.justLoadImage(context, flagUri, itemView.img_flag)
 
             itemView.setOnClickListener {
-                val intent = Intent(context, CountryDetailActivity::class.java)
+                val intent = Intent(context, CountryDetailsActivity::class.java)
                 intent.putExtra("country", item)
                 context.startActivity(intent)
             }

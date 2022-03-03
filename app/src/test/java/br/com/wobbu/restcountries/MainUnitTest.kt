@@ -3,7 +3,7 @@ package br.com.wobbu.restcountries
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import br.com.wobbu.restcountries.data.ApiResponse
-import br.com.wobbu.restcountries.data.Repository
+import br.com.wobbu.restcountries.data.main.Repository
 import br.com.wobbu.restcountries.model.Country
 import br.com.wobbu.restcountries.view.main.MainViewModel
 import com.nhaarman.mockitokotlin2.refEq

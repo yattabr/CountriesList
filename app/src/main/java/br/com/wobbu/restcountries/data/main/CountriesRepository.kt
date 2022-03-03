@@ -1,5 +1,6 @@
-package br.com.wobbu.restcountries.data
+package br.com.wobbu.restcountries.data.main
 
+import br.com.wobbu.restcountries.data.ApiCallInterface
 import br.com.wobbu.restcountries.model.Country
 import io.reactivex.Observable
 

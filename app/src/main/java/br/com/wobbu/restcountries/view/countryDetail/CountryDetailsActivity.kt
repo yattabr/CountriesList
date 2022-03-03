@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_country_detail.*
 import kotlinx.android.synthetic.main.item_countries.view.*
 import java.text.DecimalFormat
 
-class CountryDetailActivity : AppCompatActivity(), OnMapReadyCallback {
+class CountryDetailsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private lateinit var country: Country
@@ -31,13 +31,13 @@ class CountryDetailActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun initUI() {
-        txt_country_name.text = "Country - ${country.name}"
-        txt_capital.text = "Capital - ${country.capital}"
+        txt_country_name.text = "Country - ${country.name.common}"
+        txt_capital.text = "Capital - ${country.capital[0]}"
 
         val population = DecimalFormat("#,###").format(country.population.toDouble())
         txt_population.text = "Population - $population"
 
-        val flagUri = Uri.parse(country.flag)
+        val flagUri = Uri.parse(country.flags.svg)
         GlideToVectorYou.justLoadImage(this, flagUri, img_flag)
 
         val mapFragment = supportFragmentManager
@@ -49,8 +49,8 @@ class CountryDetailActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
         if (country.latlng.isNotEmpty()) {
             val location = LatLng(country.latlng[0], country.latlng[1])
-            mMap.addMarker(MarkerOptions().position(location).title(country.name))
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 2f))
+            mMap.addMarker(MarkerOptions().position(location).title(country.name.common))
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 4f))
         }
     }
 }

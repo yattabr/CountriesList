@@ -33,8 +33,9 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".view.countryDetail.CountryDetailActivity"
-            android:label="@string/title_activity_country_detail"></activity>
+            android:name=".view.countryDetail.CountryDetailsActivity"
+            android:label="@string/title_activity_country_detail" />
+
         <activity android:name=".view.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

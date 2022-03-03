@@ -3,7 +3,7 @@ package br.com.wobbu.restcountries.base
 import androidx.annotation.NonNull
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import br.com.wobbu.restcountries.data.Repository
+import br.com.wobbu.restcountries.data.main.Repository
 import br.com.wobbu.restcountries.view.main.MainViewModel
 import javax.inject.Inject
 

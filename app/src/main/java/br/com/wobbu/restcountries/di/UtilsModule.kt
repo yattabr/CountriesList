@@ -2,7 +2,7 @@ package br.com.wobbu.restcountries.di
 
 import androidx.lifecycle.ViewModelProvider
 import br.com.wobbu.restcountries.data.ApiCallInterface
-import br.com.wobbu.restcountries.data.Repository
+import br.com.wobbu.restcountries.data.main.Repository
 import br.com.wobbu.restcountries.data.Urls
 import br.com.wobbu.restcountries.base.ViewModelFactory
 import com.google.gson.FieldNamingPolicy
@@ -72,9 +72,9 @@ open class UtilsModule {
         return Repository(apiCallInterface)
     }
 
-    @Provides
-    @Singleton
-    internal fun getViewModelFactory(myRepository: Repository): ViewModelProvider.Factory {
-        return ViewModelFactory(myRepository)
-    }
+//    @Provides
+//    @Singleton
+//    internal fun getViewModelFactory(myRepository: Repository): ViewModelProvider.Factory {
+//        return ViewModelFactory(myRepository)
+//    }
 }
