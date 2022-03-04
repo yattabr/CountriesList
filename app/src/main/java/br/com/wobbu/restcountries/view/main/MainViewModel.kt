@@ -2,25 +2,43 @@ package br.com.wobbu.restcountries.view.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import br.com.wobbu.restcountries.data.ApiResponse
-import br.com.wobbu.restcountries.data.main.Repository
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
+import br.com.wobbu.restcountries.domain.CountriesUseCase
+import br.com.wobbu.restcountries.model.Country
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MainViewModel(var repository: Repository) : ViewModel() {
+class MainViewModel @Inject constructor() : ViewModel() {
 
-    val fetchCountriesObserver = MutableLiveData<ApiResponse>()
-    private val disposables = CompositeDisposable()
+    @Inject
+    lateinit var countriesUseCase: CountriesUseCase
+
+    private val _fetchCountriesObserver = MutableLiveData<ArrayList<Country>>()
+    var fetchCountriesObserver = _fetchCountriesObserver
+
+    private val _loadingObserver = MutableLiveData<Boolean>()
+    var loadingObserver = _loadingObserver
+
+    private val _errorObserver = MutableLiveData<String>()
+    var errorObserver = _errorObserver
 
     fun fetchCountries() {
-        disposables.add(repository.fetchCountries()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .doOnSubscribe { fetchCountriesObserver.setValue(ApiResponse.loading()) }
-            .subscribe(
-                { result -> fetchCountriesObserver.setValue(ApiResponse.success(result)) },
-                { throwable -> fetchCountriesObserver.setValue(ApiResponse.error(throwable)) }
-            ))
+        viewModelScope.launch {
+            countriesUseCase.fetchCountries().collect {
+                when (it) {
+                    is ApiResponse.Loading -> _loadingObserver.value = true
+                    is ApiResponse.Success -> {
+                        _fetchCountriesObserver.value = it.data!!
+                        _loadingObserver.value = false
+                    }
+                    is ApiResponse.Error -> {
+                        _errorObserver.value = ""
+                        _loadingObserver.value = false
+                    }
+                }
+            }
+        }
     }
 }

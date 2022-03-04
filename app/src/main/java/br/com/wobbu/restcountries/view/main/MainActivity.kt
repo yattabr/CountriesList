@@ -12,8 +12,6 @@ import androidx.lifecycle.ViewModelProvider
 import br.com.wobbu.restcountries.R
 import br.com.wobbu.restcountries.base.BaseApplication
 import br.com.wobbu.restcountries.base.ViewModelFactory
-import br.com.wobbu.restcountries.data.ApiResponse
-import br.com.wobbu.restcountries.data.Status
 import br.com.wobbu.restcountries.model.Country
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -21,17 +19,18 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var viewModelFactory: ViewModelFactory
+    lateinit var countriesAdapter: CountriesAdapter
 
     @Inject
-    lateinit var countriesAdapter: CountriesAdapter
-    private lateinit var mainViewModel: MainViewModel
+    lateinit var viewModelFactory: ViewModelFactory
+
+    lateinit var mainViewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        (application as BaseApplication).getAppComponent().doInjection(this)
+        (application as BaseApplication).component.inject(this)
         mainViewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
 
         initObserver()
@@ -45,24 +44,20 @@ class MainActivity : AppCompatActivity() {
 
     private fun initObserver() {
         mainViewModel.fetchCountriesObserver.observe(this, Observer {
-            when (it) {
-                is ApiResponse -> countriesResponse(it)
+            mountRecyclerView(it)
+        })
+
+        mainViewModel.loadingObserver.observe(this, {
+            if (it) {
+                loading.visibility = View.VISIBLE
+            } else {
+                loading.visibility = View.GONE
             }
         })
-    }
 
-    private fun countriesResponse(apiResponse: ApiResponse) {
-        when (apiResponse.status) {
-            Status.LOADING -> loading.visibility = View.VISIBLE
-            Status.SUCCESS -> {
-                loading.visibility = View.GONE
-                mountRecyclerView(apiResponse.data as ArrayList<Country>)
-            }
-            Status.ERROR -> {
-                loading.visibility = View.GONE
-                Log.i("API_RESPONSE_ERROR", apiResponse.error.toString())
-            }
-        }
+        mainViewModel.errorObserver.observe(this, {
+            Log.i("API_RESPONSE_ERROR", it)
+        })
     }
 
     private fun mountRecyclerView(items: ArrayList<Country>) {

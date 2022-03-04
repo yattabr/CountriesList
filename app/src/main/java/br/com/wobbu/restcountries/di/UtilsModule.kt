@@ -1,13 +1,13 @@
 package br.com.wobbu.restcountries.di
 
-import androidx.lifecycle.ViewModelProvider
 import br.com.wobbu.restcountries.data.ApiCallInterface
-import br.com.wobbu.restcountries.data.main.Repository
 import br.com.wobbu.restcountries.data.Urls
-import br.com.wobbu.restcountries.base.ViewModelFactory
+import br.com.wobbu.restcountries.data.main.CountriesRepository
+import br.com.wobbu.restcountries.domain.CountriesUseCase
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -65,16 +65,4 @@ open class UtilsModule {
     internal fun getApiCallInterface(retrofit: Retrofit): ApiCallInterface {
         return retrofit.create<ApiCallInterface>(ApiCallInterface::class.java)
     }
-
-    @Provides
-    @Singleton
-    internal fun getRepository(apiCallInterface: ApiCallInterface): Repository {
-        return Repository(apiCallInterface)
-    }
-
-//    @Provides
-//    @Singleton
-//    internal fun getViewModelFactory(myRepository: Repository): ViewModelProvider.Factory {
-//        return ViewModelFactory(myRepository)
-//    }
 }

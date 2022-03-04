@@ -1,29 +1,16 @@
 package br.com.wobbu.restcountries.data
 
-import io.reactivex.annotations.NonNull
+sealed class ApiResponse<out R> {
 
-class ApiResponse {
-    var status: Status
-    var data: Any?
-    var error: Throwable?
+    data class Success<out T>(val data: T) : ApiResponse<T>()
+    data class Error(val error: String) : ApiResponse<Nothing>()
+    object Loading : ApiResponse<Nothing>()
 
-    constructor(status: Status, data: Any?, error: Throwable?) {
-        this.status = status
-        this.data = data
-        this.error = error
-    }
-
-    companion object {
-        fun loading(): ApiResponse {
-            return ApiResponse(Status.LOADING, null, null)
-        }
-
-        fun success(@NonNull data: Any): ApiResponse {
-            return ApiResponse(Status.SUCCESS, data, null)
-        }
-
-        fun error(@NonNull error: Throwable): ApiResponse {
-            return ApiResponse(Status.ERROR, null, error)
+    override fun toString(): String {
+        return when (this) {
+            is Success<*> -> "Success[data=$data]"
+            is Error -> "Error[error=$error]"
+            Loading -> "Loading"
         }
     }
 }

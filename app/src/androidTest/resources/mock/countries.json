@@ -1,95 +1,40 @@
 [
   {
-    "name": "United Kingdom of Great Britain and Northern Ireland",
-    "topLevelDomain": [
-      ".uk"
-    ],
-    "alpha2Code": "GB",
-    "alpha3Code": "GBR",
-    "callingCodes": [
-      "44"
-    ],
-    "capital": "London",
-    "altSpellings": [
-      "GB",
-      "UK",
-      "Great Britain"
-    ],
-    "region": "Europe",
-    "subregion": "Northern Europe",
-    "population": 65110000,
-    "latlng": [
-      54.0,
-      -2.0
-    ],
-    "demonym": "British",
-    "area": 242900.0,
-    "gini": 34.0,
-    "timezones": [
-      "UTC-08:00",
-      "UTC-05:00",
-      "UTC-04:00",
-      "UTC-03:00",
-      "UTC-02:00",
-      "UTC",
-      "UTC+01:00",
-      "UTC+02:00",
-      "UTC+06:00"
-    ],
-    "borders": [
-      "IRL"
-    ],
-    "nativeName": "United Kingdom",
-    "numericCode": "826",
-    "currencies": [
-      {
-        "code": "GBP",
-        "name": "British pound",
-        "symbol": "£"
+    "name": {
+      "common": "Brazil",
+      "official": "Federative Republic of Brazil",
+      "nativeName": {
+        "por": {
+          "official": "República Federativa do Brasil",
+          "common": "Brasil"
+        }
       }
-    ],
-    "languages": [
-      {
-        "iso639_1": "en",
-        "iso639_2": "eng",
-        "name": "English",
-        "nativeName": "English"
-      }
-    ],
-    "translations": {
-      "de": "Vereinigtes Königreich",
-      "es": "Reino Unido",
-      "fr": "Royaume-Uni",
-      "ja": "イギリス",
-      "it": "Regno Unito",
-      "br": "Reino Unido",
-      "pt": "Reino Unido",
-      "nl": "Verenigd Koninkrijk",
-      "hr": "Ujedinjeno Kraljevstvo",
-      "fa": "بریتانیای کبیر و ایرلند شمالی"
     },
-    "flag": "https://restcountries.eu/data/gbr.svg",
-    "regionalBlocs": [
-      {
-        "acronym": "EU",
-        "name": "European Union",
-        "otherAcronyms": [],
-        "otherNames": []
-      }
-    ],
-    "cioc": "GBR"
-  },
-  {
-    "name": "Brazil",
-    "topLevelDomain": [
+    "tld": [
       ".br"
     ],
-    "alpha2Code": "BR",
-    "alpha3Code": "BRA",
-    "callingCodes": [
-      "55"
+    "cca2": "BR",
+    "ccn3": "076",
+    "cca3": "BRA",
+    "cioc": "BRA",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "BRL": {
+        "name": "Brazilian real",
+        "symbol": "R$"
+      }
+    },
+    "idd": {
+      "root": "+5",
+      "suffixes": [
+        "5"
+      ]
+    },
+    "capital": [
+      "Brasília"
     ],
-    "capital": "Brasília",
     "altSpellings": [
       "BR",
       "Brasil",
@@ -98,20 +43,104 @@
     ],
     "region": "Americas",
     "subregion": "South America",
-    "population": 206135893,
+    "languages": {
+      "por": "Portuguese"
+    },
+    "translations": {
+      "ara": {
+        "official": "جمهورية البرازيل الاتحادية",
+        "common": "البرازيل"
+      },
+      "ces": {
+        "official": "Brazilská federativní republika",
+        "common": "Brazílie"
+      },
+      "cym": {
+        "official": "Gweriniaeth Ffederal Brasil",
+        "common": "Brasil"
+      },
+      "deu": {
+        "official": "Föderative Republik Brasilien",
+        "common": "Brasilien"
+      },
+      "est": {
+        "official": "Brasiilia Liitvabariik",
+        "common": "Brasiilia"
+      },
+      "fin": {
+        "official": "Brasilian liittotasavalta",
+        "common": "Brasilia"
+      },
+      "fra": {
+        "official": "République fédérative du Brésil",
+        "common": "Brésil"
+      },
+      "hrv": {
+        "official": "Savezne Republike Brazil",
+        "common": "Brazil"
+      },
+      "hun": {
+        "official": "Brazil Szövetségi Köztársaság",
+        "common": "Brazília"
+      },
+      "ita": {
+        "official": "Repubblica federativa del Brasile",
+        "common": "Brasile"
+      },
+      "jpn": {
+        "official": "ブラジル連邦共和国",
+        "common": "ブラジル"
+      },
+      "kor": {
+        "official": "브라질 연방 공화국",
+        "common": "브라질"
+      },
+      "nld": {
+        "official": "Federale Republiek Brazilië",
+        "common": "Brazilië"
+      },
+      "per": {
+        "official": "جمهوری فدراتیو برزیل",
+        "common": "برزیل"
+      },
+      "pol": {
+        "official": "Federacyjna Republika Brazylii",
+        "common": "Brazylia"
+      },
+      "por": {
+        "official": "República Federativa do Brasil",
+        "common": "Brasil"
+      },
+      "rus": {
+        "official": "Федеративная Республика Бразилия",
+        "common": "Бразилия"
+      },
+      "slk": {
+        "official": "Brazílska federatívna republika",
+        "common": "Brazília"
+      },
+      "spa": {
+        "official": "República Federativa del Brasil",
+        "common": "Brasil"
+      },
+      "swe": {
+        "official": "Förbundsrepubliken Brasilien",
+        "common": "Brasilien"
+      },
+      "urd": {
+        "official": "وفاقی جمہوریہ برازیل",
+        "common": "برازیل"
+      },
+      "zho": {
+        "official": "巴西联邦共和国",
+        "common": "巴西"
+      }
+    },
     "latlng": [
       -10.0,
       -55.0
     ],
-    "demonym": "Brazilian",
-    "area": 8515767.0,
-    "gini": 54.7,
-    "timezones": [
-      "UTC-05:00",
-      "UTC-04:00",
-      "UTC-03:00",
-      "UTC-02:00"
-    ],
+    "landlocked": false,
     "borders": [
       "ARG",
       "BOL",
@@ -124,139 +153,651 @@
       "URY",
       "VEN"
     ],
-    "nativeName": "Brasil",
-    "numericCode": "076",
-    "currencies": [
-      {
-        "code": "BRL",
-        "name": "Brazilian real",
-        "symbol": "R$"
+    "area": 8515767.0,
+    "demonyms": {
+      "eng": {
+        "f": "Brazilian",
+        "m": "Brazilian"
+      },
+      "fra": {
+        "f": "Brésilienne",
+        "m": "Brésilien"
       }
-    ],
-    "languages": [
-      {
-        "iso639_1": "pt",
-        "iso639_2": "por",
-        "name": "Portuguese",
-        "nativeName": "Português"
-      }
-    ],
-    "translations": {
-      "de": "Brasilien",
-      "es": "Brasil",
-      "fr": "Brésil",
-      "ja": "ブラジル",
-      "it": "Brasile",
-      "br": "Brasil",
-      "pt": "Brasil",
-      "nl": "Brazilië",
-      "hr": "Brazil",
-      "fa": "برزیل"
     },
-    "flag": "https://restcountries.eu/data/bra.svg",
-    "regionalBlocs": [
-      {
-        "acronym": "USAN",
-        "name": "Union of South American Nations",
-        "otherAcronyms": [
-          "UNASUR",
-          "UNASUL",
-          "UZAN"
-        ],
-        "otherNames": [
-          "Unión de Naciones Suramericanas",
-          "União de Nações Sul-Americanas",
-          "Unie van Zuid-Amerikaanse Naties",
-          "South American Union"
-        ]
-      }
-    ],
-    "cioc": "BRA"
-  },
-  {
-    "name": "United States of America",
-    "topLevelDomain": [
-      ".us"
-    ],
-    "alpha2Code": "US",
-    "alpha3Code": "USA",
-    "callingCodes": [
-      "1"
-    ],
-    "capital": "Washington, D.C.",
-    "altSpellings": [
-      "US",
-      "USA",
-      "United States of America"
-    ],
-    "region": "Americas",
-    "subregion": "Northern America",
-    "population": 323947000,
-    "latlng": [
-      38.0,
-      -97.0
-    ],
-    "demonym": "American",
-    "area": 9629091.0,
-    "gini": 48.0,
+    "flag": "\uD83C\uDDE7\uD83C\uDDF7",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/waCKk21HeeqFzkNC9",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/59470"
+    },
+    "population": 212559409,
+    "gini": {
+      "2019": 53.4
+    },
+    "fifa": "BRA",
+    "car": {
+      "signs": [
+        "BR"
+      ],
+      "side": "right"
+    },
     "timezones": [
-      "UTC-12:00",
-      "UTC-11:00",
-      "UTC-10:00",
-      "UTC-09:00",
-      "UTC-08:00",
-      "UTC-07:00",
-      "UTC-06:00",
       "UTC-05:00",
       "UTC-04:00",
-      "UTC+10:00",
-      "UTC+12:00"
+      "UTC-03:00",
+      "UTC-02:00"
     ],
+    "continents": [
+      "South America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/br.png",
+      "svg": "https://flagcdn.com/br.svg"
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/br.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/br.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        -15.79,
+        -47.88
+      ]
+    },
+    "postalCode": {
+      "format": "#####-###",
+      "regex": "^(\\d{8})$"
+    }
+  },
+  {
+    "name": {
+      "common": "United Kingdom",
+      "official": "United Kingdom of Great Britain and Northern Ireland",
+      "nativeName": {
+        "eng": {
+          "official": "United Kingdom of Great Britain and Northern Ireland",
+          "common": "United Kingdom"
+        }
+      }
+    },
+    "tld": [
+      ".uk"
+    ],
+    "cca2": "GB",
+    "ccn3": "826",
+    "cca3": "GBR",
+    "cioc": "GBR",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "GBP": {
+        "name": "British pound",
+        "symbol": "£"
+      }
+    },
+    "idd": {
+      "root": "+4",
+      "suffixes": [
+        "4"
+      ]
+    },
+    "capital": [
+      "London"
+    ],
+    "altSpellings": [
+      "GB",
+      "UK",
+      "Great Britain"
+    ],
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "languages": {
+      "eng": "English"
+    },
+    "translations": {
+      "ara": {
+        "official": "المملكة المتحدة لبريطانيا العظمى وايرلندا الشمالية",
+        "common": "المملكة المتحدة"
+      },
+      "ces": {
+        "official": "Spojené království Velké Británie a Severního Irska",
+        "common": "Spojené království"
+      },
+      "cym": {
+        "official": "United Kingdom of Great Britain and Northern Ireland",
+        "common": "United Kingdom"
+      },
+      "deu": {
+        "official": "Vereinigtes Königreich Großbritannien und Nordirland",
+        "common": "Vereinigtes Königreich"
+      },
+      "est": {
+        "official": "Suurbritannia ja Põhja-Iiri Ühendkuningriik",
+        "common": "Suurbritannia"
+      },
+      "fin": {
+        "official": "Ison-Britannian ja Pohjois-Irlannin yhdistynyt kuningaskunta",
+        "common": "Yhdistynyt kuningaskunta"
+      },
+      "fra": {
+        "official": "Royaume-Uni de Grande-Bretagne et d'Irlande du Nord",
+        "common": "Royaume-Uni"
+      },
+      "hrv": {
+        "official": "Ujedinjeno Kraljevstvo Velike Britanije i Sjeverne Irske",
+        "common": "Ujedinjeno Kraljevstvo"
+      },
+      "hun": {
+        "official": "Nagy-Britannia és Észak-Írország Egyesült Királysága",
+        "common": "Egyesült Királyság"
+      },
+      "ita": {
+        "official": "Regno Unito di Gran Bretagna e Irlanda del Nord",
+        "common": "Regno Unito"
+      },
+      "jpn": {
+        "official": "グレート·ブリテンおよび北アイルランド連合王国",
+        "common": "イギリス"
+      },
+      "kor": {
+        "official": "그레이트브리튼 북아일랜드 연합 왕국",
+        "common": "영국"
+      },
+      "nld": {
+        "official": "Verenigd Koninkrijk van Groot-Brittannië en Noord-Ierland",
+        "common": "Verenigd Koninkrijk"
+      },
+      "per": {
+        "official": "پادشاهی متحد بریتانیای کبیر و ایرلند شمالی",
+        "common": "انگلیس"
+      },
+      "pol": {
+        "official": "Zjednoczone Królestwo Wielkiej Brytanii i Irlandii Północnej",
+        "common": "Zjednoczone Krłlestwo"
+      },
+      "por": {
+        "official": "Reino Unido da Grã-Bretanha e Irlanda do Norte",
+        "common": "Reino Unido"
+      },
+      "rus": {
+        "official": "Соединенное Королевство Великобритании и Северной Ирландии",
+        "common": "Великобритания"
+      },
+      "slk": {
+        "official": "Spojené kráľovstvo Veľkej Británie a SevernéhoÌrska",
+        "common": "Veľká Británia (Spojené kráľovstvo)"
+      },
+      "spa": {
+        "official": "Reino Unido de Gran Bretaña e Irlanda del Norte",
+        "common": "Reino Unido"
+      },
+      "swe": {
+        "official": "Förenade konungariket Storbritannien och Nordirland",
+        "common": "Storbritannien"
+      },
+      "urd": {
+        "official": "مملکتِ متحدہ برطانیہ عظمی و شمالی آئرلینڈ",
+        "common": "مملکتِ متحدہ"
+      },
+      "zho": {
+        "official": "大不列颠及北爱尔兰联合王国",
+        "common": "英国"
+      }
+    },
+    "latlng": [
+      54.0,
+      -2.0
+    ],
+    "landlocked": false,
     "borders": [
-      "CAN",
-      "MEX"
+      "IRL"
     ],
-    "nativeName": "United States",
-    "numericCode": "840",
-    "currencies": [
-      {
-        "code": "USD",
+    "area": 242900.0,
+    "demonyms": {
+      "eng": {
+        "f": "British",
+        "m": "British"
+      },
+      "fra": {
+        "f": "Britannique",
+        "m": "Britannique"
+      }
+    },
+    "flag": "\uD83C\uDDEC\uD83C\uDDE7",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/FoDtc3UKMkFsXAjHA",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/62149"
+    },
+    "population": 67215293,
+    "gini": {
+      "2017": 35.1
+    },
+    "car": {
+      "signs": [
+        "GB"
+      ],
+      "side": "left"
+    },
+    "timezones": [
+      "UTC-08:00",
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC-03:00",
+      "UTC-02:00",
+      "UTC",
+      "UTC+01:00",
+      "UTC+02:00",
+      "UTC+06:00"
+    ],
+    "continents": [
+      "Europe"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/gb.png",
+      "svg": "https://flagcdn.com/gb.svg"
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/gb.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/gb.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        51.5,
+        -0.08
+      ]
+    },
+    "postalCode": {
+      "format": "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
+      "regex": "^(([A-Z]\\d{2}[A-Z]{2})|([A-Z]\\d{3}[A-Z]{2})|([A-Z]{2}\\d{2}[A-Z]{2})|([A-Z]{2}\\d{3}[A-Z]{2})|([A-Z]\\d[A-Z]\\d[A-Z]{2})|([A-Z]{2}\\d[A-Z]\\d[A-Z]{2})|(GIR0AA))$"
+    }
+  },
+  {
+    "name": {
+      "common": "United States Minor Outlying Islands",
+      "official": "United States Minor Outlying Islands",
+      "nativeName": {
+        "eng": {
+          "official": "United States Minor Outlying Islands",
+          "common": "United States Minor Outlying Islands"
+        }
+      }
+    },
+    "tld": [
+      ".us"
+    ],
+    "cca2": "UM",
+    "ccn3": "581",
+    "cca3": "UMI",
+    "independent": false,
+    "status": "officially-assigned",
+    "unMember": false,
+    "currencies": {
+      "USD": {
         "name": "United States dollar",
         "symbol": "$"
       }
-    ],
-    "languages": [
-      {
-        "iso639_1": "en",
-        "iso639_2": "eng",
-        "name": "English",
-        "nativeName": "English"
-      }
-    ],
-    "translations": {
-      "de": "Vereinigte Staaten von Amerika",
-      "es": "Estados Unidos",
-      "fr": "États-Unis",
-      "ja": "アメリカ合衆国",
-      "it": "Stati Uniti D'America",
-      "br": "Estados Unidos",
-      "pt": "Estados Unidos",
-      "nl": "Verenigde Staten",
-      "hr": "Sjedinjene Američke Države",
-      "fa": "ایالات متحده آمریکا"
     },
-    "flag": "https://restcountries.eu/data/usa.svg",
-    "regionalBlocs": [
-      {
-        "acronym": "NAFTA",
-        "name": "North American Free Trade Agreement",
-        "otherAcronyms": [],
-        "otherNames": [
-          "Tratado de Libre Comercio de América del Norte",
-          "Accord de Libre-échange Nord-Américain"
-        ]
-      }
+    "idd": {
+      "root": "+2",
+      "suffixes": [
+        "68"
+      ]
+    },
+    "altSpellings": [
+      "UM"
     ],
-    "cioc": "USA"
+    "region": "Americas",
+    "subregion": "North America",
+    "languages": {
+      "eng": "English"
+    },
+    "translations": {
+      "ara": {
+        "official": "جزر الولايات المتحدة الصغيرة النائية",
+        "common": "جزر الولايات المتحدة الصغيرة النائية"
+      },
+      "ces": {
+        "official": "Menší odlehlé ostrovy Spojených států amerických",
+        "common": "Menší odlehlé ostrovy USA"
+      },
+      "cym": {
+        "official": "United States Minor Outlying Islands",
+        "common": "United States Minor Outlying Islands"
+      },
+      "deu": {
+        "official": "USA, kleinere ausgelagerte Inseln",
+        "common": "Kleinere Inselbesitzungen der Vereinigten Staaten"
+      },
+      "est": {
+        "official": "Ühendriikide väikesed hajasaared",
+        "common": "Ühendriikide hajasaared"
+      },
+      "fin": {
+        "official": "Yhdysvaltain asumattomat saaret",
+        "common": "Yhdysvaltain asumattomat saaret"
+      },
+      "fra": {
+        "official": "Îles mineures éloignées des États-Unis",
+        "common": "Îles mineures éloignées des États-Unis"
+      },
+      "hrv": {
+        "official": "Mali udaljeni otoci SAD-a",
+        "common": "Mali udaljeni otoci SAD-a"
+      },
+      "hun": {
+        "official": "Az Amerikai Egyesült Államok lakatlan külbirtokai",
+        "common": "Az Amerikai Egyesült Államok lakatlan külbirtokai"
+      },
+      "ita": {
+        "official": "Stati Uniti Isole Minori",
+        "common": "Isole minori esterne degli Stati Uniti d'America"
+      },
+      "jpn": {
+        "official": "アメリカ合衆国外諸島",
+        "common": "合衆国領有小離島"
+      },
+      "kor": {
+        "official": "미국령 군소 제도",
+        "common": "미국령 군소 제도"
+      },
+      "nld": {
+        "official": "Kleine afgelegen eilanden van de Verenigde Staten",
+        "common": "Kleine afgelegen eilanden van de Verenigde Staten"
+      },
+      "per": {
+        "official": "جزایر کوچک حاشیه‌ای ایالات متحده آمریکا",
+        "common": "جزایر کوچک حاشیه‌ای ایالات متحده آمریکا"
+      },
+      "pol": {
+        "official": "Dalekie Wyspy Mniejsze Stanów Zjednoczonych",
+        "common": "Dalekie Wyspy Mniejsze Stanów Zjednoczonych"
+      },
+      "por": {
+        "official": "Estados Unidos Ilhas Menores Distantes",
+        "common": "Ilhas Menores Distantes dos Estados Unidos"
+      },
+      "rus": {
+        "official": "Внешние малые острова США",
+        "common": "Внешние малые острова США"
+      },
+      "slk": {
+        "official": "Menšie odľahlé ostrovy Spjoených štátov",
+        "common": "Menšie odľahlé ostrovy USA"
+      },
+      "spa": {
+        "official": "Estados Unidos Islas menores alejadas de",
+        "common": "Islas Ultramarinas Menores de Estados Unidos"
+      },
+      "swe": {
+        "official": "Förenta staternas mindre öar i Oceanien och Västindien",
+        "common": "Förenta staternas mindre öar i Oceanien och Västindien"
+      },
+      "urd": {
+        "official": "امریکی چھوٹے بیرونی جزائر",
+        "common": "امریکی چھوٹے بیرونی جزائر"
+      },
+      "zho": {
+        "official": "美国本土外小岛屿",
+        "common": "美国本土外小岛屿"
+      }
+    },
+    "latlng": [
+      19.3,
+      166.633333
+    ],
+    "landlocked": false,
+    "area": 34.2,
+    "demonyms": {
+      "eng": {
+        "f": "American Islander",
+        "m": "American Islander"
+      }
+    },
+    "flag": "\uD83C\uDDFA\uD83C\uDDF2",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/hZKnrzgeK69dDyPF8",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/6430384"
+    },
+    "population": 300,
+    "car": {
+      "signs": [
+        ""
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC-11:00",
+      "UTC-10:00",
+      "UTC+12:00"
+    ],
+    "continents": [
+      "Oceania"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/um.png",
+      "svg": "https://flagcdn.com/um.svg"
+    },
+    "coatOfArms": {},
+    "startOfWeek": "monday",
+    "capitalInfo": {}
+  },
+  {
+    "name": {
+      "common": "France",
+      "official": "French Republic",
+      "nativeName": {
+        "fra": {
+          "official": "République française",
+          "common": "France"
+        }
+      }
+    },
+    "tld": [
+      ".fr"
+    ],
+    "cca2": "FR",
+    "ccn3": "250",
+    "cca3": "FRA",
+    "cioc": "FRA",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "idd": {
+      "root": "+3",
+      "suffixes": [
+        "3"
+      ]
+    },
+    "capital": [
+      "Paris"
+    ],
+    "altSpellings": [
+      "FR",
+      "French Republic",
+      "République française"
+    ],
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "languages": {
+      "fra": "French"
+    },
+    "translations": {
+      "ara": {
+        "official": "الجمهورية الفرنسية",
+        "common": "فرنسا"
+      },
+      "ces": {
+        "official": "Francouzská republika",
+        "common": "Francie"
+      },
+      "cym": {
+        "official": "French Republic",
+        "common": "France"
+      },
+      "deu": {
+        "official": "Französische Republik",
+        "common": "Frankreich"
+      },
+      "est": {
+        "official": "Prantsuse Vabariik",
+        "common": "Prantsusmaa"
+      },
+      "fin": {
+        "official": "Ranskan tasavalta",
+        "common": "Ranska"
+      },
+      "fra": {
+        "official": "République française",
+        "common": "France"
+      },
+      "hrv": {
+        "official": "Francuska Republika",
+        "common": "Francuska"
+      },
+      "hun": {
+        "official": "Francia Köztársaság",
+        "common": "Franciaország"
+      },
+      "ita": {
+        "official": "Repubblica francese",
+        "common": "Francia"
+      },
+      "jpn": {
+        "official": "フランス共和国",
+        "common": "フランス"
+      },
+      "kor": {
+        "official": "프랑스 공화국",
+        "common": "프랑스"
+      },
+      "nld": {
+        "official": "Franse Republiek",
+        "common": "Frankrijk"
+      },
+      "per": {
+        "official": "جمهوری فرانسه",
+        "common": "فرانسه"
+      },
+      "pol": {
+        "official": "Republika Francuska",
+        "common": "Francja"
+      },
+      "por": {
+        "official": "República Francesa",
+        "common": "França"
+      },
+      "rus": {
+        "official": "Французская Республика",
+        "common": "Франция"
+      },
+      "slk": {
+        "official": "Francúzska republika",
+        "common": "Francúzsko"
+      },
+      "spa": {
+        "official": "República francés",
+        "common": "Francia"
+      },
+      "swe": {
+        "official": "Republiken Frankrike",
+        "common": "Frankrike"
+      },
+      "urd": {
+        "official": "جمہوریہ فرانس",
+        "common": "فرانس"
+      },
+      "zho": {
+        "official": "法兰西共和国",
+        "common": "法国"
+      }
+    },
+    "latlng": [
+      46.0,
+      2.0
+    ],
+    "landlocked": false,
+    "borders": [
+      "AND",
+      "BEL",
+      "DEU",
+      "ITA",
+      "LUX",
+      "MCO",
+      "ESP",
+      "CHE"
+    ],
+    "area": 551695.0,
+    "demonyms": {
+      "eng": {
+        "f": "French",
+        "m": "French"
+      },
+      "fra": {
+        "f": "Française",
+        "m": "Français"
+      }
+    },
+    "flag": "\uD83C\uDDEB\uD83C\uDDF7",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/g7QxxSFsWyTPKuzd7",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/1403916"
+    },
+    "population": 67391582,
+    "gini": {
+      "2018": 32.4
+    },
+    "fifa": "FRA",
+    "car": {
+      "signs": [
+        "F"
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC-10:00",
+      "UTC-09:30",
+      "UTC-09:00",
+      "UTC-08:00",
+      "UTC-04:00",
+      "UTC-03:00",
+      "UTC+01:00",
+      "UTC+02:00",
+      "UTC+03:00",
+      "UTC+04:00",
+      "UTC+05:00",
+      "UTC+10:00",
+      "UTC+11:00",
+      "UTC+12:00"
+    ],
+    "continents": [
+      "Europe"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/fr.png",
+      "svg": "https://flagcdn.com/fr.svg"
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/fr.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/fr.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        48.87,
+        2.33
+      ]
+    },
+    "postalCode": {
+      "format": "#####",
+      "regex": "^(\\d{5})$"
+    }
   }
 ]

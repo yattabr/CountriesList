@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface ApiCallInterface {
 
     @GET(Urls.FETCH_COUNTRIES)
-    fun fetchCountries(): Observable<ArrayList<Country>>
+    suspend fun fetchCountries(): ArrayList<Country>?
 }
