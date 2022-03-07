@@ -1,29 +1,27 @@
 package br.com.wobbu.restcountries
 
 import android.content.Intent
+import androidx.test.core.app.ActivityScenario
+import androidx.test.core.app.launchActivity
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.rule.ActivityTestRule
 import br.com.wobbu.restcountries.utils.MockServerDispatcher
 import br.com.wobbu.restcountries.view.main.MainActivity
 import okhttp3.mockwebserver.MockWebServer
 import org.hamcrest.Matchers
 import org.junit.After
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class MainActivityEspressoTest {
 
-    @Rule
-    @JvmField
-    var activityRule = ActivityTestRule(MainActivity::class.java, false, false)
+    lateinit var scenario: ActivityScenario<MainActivity>
     private lateinit var webServer: MockWebServer
 
     @Before
@@ -37,12 +35,13 @@ class MainActivityEspressoTest {
     @Throws(Exception::class)
     fun tearDown() {
         webServer.shutdown()
+        scenario.close()
     }
 
     @Test
     fun fetchListOfCountries() {
         webServer.setDispatcher(MockServerDispatcher.RequestDispatcher())
-        activityRule.launchActivity(Intent())
+        scenario = launchActivity()
 
         Espresso.onView(ViewMatchers.withId(R.id.recycler_view))
             .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
@@ -57,7 +56,7 @@ class MainActivityEspressoTest {
     @Test
     fun searchCountryByName() {
         webServer.setDispatcher(MockServerDispatcher.RequestDispatcher())
-        activityRule.launchActivity(Intent())
+        scenario = launchActivity()
 
         Espresso.onView(ViewMatchers.withId(R.id.edit_search))
             .perform(ViewActions.clearText(), ViewActions.typeText("United"))
@@ -73,7 +72,7 @@ class MainActivityEspressoTest {
     @Test
     fun goToDetailActivity() {
         webServer.setDispatcher(MockServerDispatcher.RequestDispatcher())
-        activityRule.launchActivity(Intent())
+        scenario = launchActivity()
         Espresso.onView(
             Matchers.allOf(
                 ViewMatchers.withId(R.id.txt_name),

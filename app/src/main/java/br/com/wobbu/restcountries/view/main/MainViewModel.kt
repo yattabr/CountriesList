@@ -34,7 +34,7 @@ class MainViewModel @Inject constructor() : ViewModel() {
                         _loadingObserver.value = false
                     }
                     is ApiResponse.Error -> {
-                        _errorObserver.value = ""
+                        _errorObserver.value = it.error
                         _loadingObserver.value = false
                     }
                 }
